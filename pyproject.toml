@@ -1,9 +1,9 @@
 [project]
-name = "mds-desafio01-sebastianzuzunaga"
+name = "eps-desafio01-sebastianzuzunaga"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Sebastian"}
+    {name = "Sebastian Zuzunaga",email = "seb55381@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.12"

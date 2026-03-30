@@ -14,7 +14,7 @@ Abaixo constam os resumos das execuções dos comandos de segurança:
 ### 2.1. Auditoria Estática (Bandit)
 ```
 Code scanned:
-        Total lines of code: 626074
+        Total lines of code: 626071
         Total lines skipped (#nosec): 3
 
 Run metrics:
@@ -35,22 +35,27 @@ Files skipped (0):
 
 ### 2.2. Verificação de Dependências (Safety)
 ```
-Code scanned:
-        Total lines of code: 626074
-        Total lines skipped (#nosec): 3
++================================================================+
 
-Run metrics:
-        Total issues (by severity):
-                Undefined: 0
-                Low: 2765
-                Medium: 156
-                High: 28
-        Total issues (by confidence):
-                Undefined: 0
-                Low: 16
-                Medium: 112
-                High: 2821
-Files skipped (0):
+ REPORT 
+
+  Safety v3.7.0 is scanning for
+  Vulnerabilities...
+  Scanning dependencies in your environment:
+
+  -> /home/sebazac/Sebastian/EPS/Repos/EPS-
+  Desafio01-SebastianZuzunaga/.venv/lib/python3.12/site-packages
+
+  Using open-source vulnerability database
+  Found and scanned 46 packages
+  Timestamp 2026-03-30 20:01:10
+  0 vulnerabilities reported
+  0 vulnerabilities ignored
++================================================================+
+
+ No known security vulnerabilities reported. 
+
++================================================================+
 ```
 
 *Comando: `poetry run safety check`*
