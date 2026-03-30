@@ -1,0 +1,24 @@
+[project]
+name = "mds-desafio01-sebastianzuzunaga"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Sebastian"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "bandit (>=1.9.4,<2.0.0)",
+    "ruff (>=0.15.8,<0.16.0)",
+    "safety (>=3.7.0,<4.0.0)",
+    "pydantic (>=2.12.5,<3.0.0)"
+]
