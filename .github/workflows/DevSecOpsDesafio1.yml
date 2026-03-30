@@ -1,0 +1,46 @@
+name: DevSecOps pipeline - Desafio 1
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  Desafio_1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      
+      - name: Install poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "::add-path::${HOME}/.local/bin"
+      
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Configure Poetry
+        run: poetry config virtualenvs.in-project true
+
+      - name: Install safety validation and quality stack
+        run: poetry add --group dev bandit ruff safety pydantic 
+      
+      - name: Run Bandit
+        run: poetry run bandit -r .
+
+      - name: Run Ruff
+        run: poetry run ruff check .
+
+      - name: Run Safety
+        run: poetry run safety check
+
+      - name: Run Gitleaks
+        uses: zricethezav/gitleaks-action@v1
+        with:
+          args: "--path=. --report-format=json --report-path=gitleaks_report.json"
