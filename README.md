@@ -12,11 +12,61 @@ Conforme as diretrizes de Soberania Técnica, as seguintes configurações foram
 Abaixo constam os resumos das execuções dos comandos de segurança:
 
 ### 2.1. Auditoria Estática (Bandit)
-> [Cole aqui o log resumido ou o número de vulnerabilidades encontradas - Deve ser ZERO]
+```
+Code scanned:
+        Total lines of code: 626074
+        Total lines skipped (#nosec): 3
+
+Run metrics:
+        Total issues (by severity):
+                Undefined: 0
+                Low: 2765
+                Medium: 156
+                High: 28
+        Total issues (by confidence):
+                Undefined: 0
+                Low: 16
+                Medium: 112
+                High: 2821
+Files skipped (0):
+```
+
 *Comando: `poetry run bandit -r .`*
 
 ### 2.2. Verificação de Dependências (Safety)
-> [Cole aqui o log da verificação de CVEs em bibliotecas de terceiros]
+```
++======================================================================================================+
+
+                               /$$$$$$            /$$
+                              /$$__  $$          | $$
+           /$$$$$$$  /$$$$$$ | $$  \__//$$$$$$  /$$$$$$   /$$   /$$
+          /$$_____/ |____  $$| $$$$   /$$__  $$|_  $$_/  | $$  | $$
+         |  $$$$$$   /$$$$$$$| $$_/  | $$$$$$$$  | $$    | $$  | $$
+          \____  $$ /$$__  $$| $$    | $$_____/  | $$ /$$| $$  | $$
+          /$$$$$$$/|  $$$$$$$| $$    |  $$$$$$$  |  $$$$/|  $$$$$$$
+         |_______/  \_______/|__/     \_______/   \___/   \____  $$
+                                                          /$$  | $$
+                                                         |  $$$$$$/
+  by safetycli.com                                        \______/
+
++======================================================================================================+
+
+ REPORT 
+
+  Safety v3.7.0 is scanning for Vulnerabilities...
+  Scanning dependencies in your environment:
+
+  -> /home/sebazac/Sebastian/MDS/Repos/MDS-Desafio01-SebastianZuzunaga/.venv/lib/python3.12/site-
+  packages
+
+  Using open-source vulnerability database
+  Found and scanned 46 packages
+  Timestamp 2026-03-30 19:13:28
+  0 vulnerabilities reported
+  0 vulnerabilities ignored
++======================================================================================================+
+```
+
 *Comando: `poetry run safety check`*
 
 ### 2.3. Qualidade e Conformidade (Ruff)
