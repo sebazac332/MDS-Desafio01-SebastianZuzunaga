@@ -70,7 +70,7 @@ All checks passed!
 
 ## 3. Evidência de Integração Contínua (CI)
 O pipeline automatizado foi executado com sucesso no GitHub Actions:
-- **Link da Action de Sucesso:** [COLE AQUI O LINK DO SEU GITHUB ACTIONS]
+- **Link da Action de Sucesso:** https://github.com/sebazac332/EPS-Desafio01-SebastianZuzunaga/actions/runs/23769512047/job/69257351378
 
 ## 4. Declaração de Soberania Técnica (CISSP Domain 8)
 Eu, Sebastián Héctor Zuzunaga Rosado, declaro que auditei manualmente as ferramentas e dependências deste projeto. Confirmo que o código gerado via IA (GitHub Copilot) passou pela minha revisão humana (*Human-in-the-loop*), garantindo que não há vazamento de segredos ou falhas lógicas críticas antes da migração para o ecossistema da PCDF.
